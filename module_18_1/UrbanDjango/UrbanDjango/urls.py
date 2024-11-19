@@ -16,10 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from task2.views import welcome, Welcome
+# from task2.views import welcome, Welcome
+#
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('welcome/', welcome),
+#     path('goodbye/', Welcome.as_view())
+# ]
+
+from task3.views import hauptseite, verkaufhaus
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('welcome/', welcome),
-    path('goodbye/', Welcome.as_view())
+    path('', hauptseite),
+    path('shop/', verkaufhaus)
 ]
