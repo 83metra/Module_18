@@ -24,9 +24,10 @@ from django.urls import path
 #     path('goodbye/', Welcome.as_view())
 # ]
 
-from task3.views import hauptseite, verkaufhaus
+from task3.views import hauptseite, verkaufhaus, korb
 
 urlpatterns = [
     path('', hauptseite),
-    path('shop/', verkaufhaus)
+    path('shop/', verkaufhaus),
+    path('cart/', korb)
 ]

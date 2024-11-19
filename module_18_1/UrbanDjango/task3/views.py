@@ -13,10 +13,25 @@ def hauptseite(request):
 
 def verkaufhaus(request):
     title = 'Магазин'
-    text = 'Здесь можно купить старые добрые игры.'
+    text = 'Здесь можно купить старые добрые игры. Неувядающая классика, заставляющая Вас рыдать от ностальгического восторга!'
+    first = 'Doom II'
+    second = 'Warcraft II'
+    third = 'Vikings'
+    context = {
+        'title': title,
+        'text': text,
+        'first': first,
+        'second': second,
+        'third': third
+    }
+    return render(request, 'verkaufhaus.html', context)
+
+def korb(request):
+    title = 'Корзина'
+    text = 'Корзина пуста'
     context = {
         'title': title,
         'text': text
     }
-    return render(request, 'verkaufhaus.html', context)
+    return render(request, 'korb.html', context)
 
