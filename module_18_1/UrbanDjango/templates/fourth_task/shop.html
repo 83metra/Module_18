@@ -1,0 +1,43 @@
+{% extends 'menu.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <header>
+        {% block pagename %}
+        <h1>{{text}}</h1>
+        {% endblock %}
+    </header>
+
+    <nav>
+        {% block menu %}
+            {{ block.super }}
+        {% endblock %}
+    </nav>
+<main>
+{% block content %}
+    {% for game in games %}
+        <p>{{ game }}</p>
+    {% endfor %}
+        <p><a href="/ ">Назад</a></p>
+{% endblock %}
+</main>
+</body>
+
+<!--</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Title</title>
+</head>
+<body>
+
+
+    {% for i in games %}
+        <p>{{i}}</p>
+    {% endfor %}
+
+</body>
+</html>-->

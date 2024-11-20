@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 # Create your views here.
-def hauptseite(request):
+def platform(request):
     title = 'Магазин ретро-игр'
     text = 'Главная страница'
     context = {
@@ -11,22 +11,17 @@ def hauptseite(request):
     }
     return render(request, 'platform.html', context)
 
-def verkaufhaus(request):
+def shop(request):
     title = 'Магазин'
-    text = 'Здесь можно купить старые добрые игры. Неувядающая классика, заставляющая Вас рыдать от ностальгического восторга!'
-    first = 'Doom II'
-    second = 'Warcraft II'
-    third = 'Vikings'
+    text = 'Магазин'
     context = {
         'title': title,
         'text': text,
-        'first': first,
-        'second': second,
-        'third': third
+        'games:': ['Doom II', 'Warcraft', 'Vikings'],
     }
     return render(request, 'shop.html', context)
 
-def korb(request):
+def cart(request):
     title = 'Корзина'
     text = 'Корзина пуста'
     context = {
@@ -34,4 +29,5 @@ def korb(request):
         'text': text
     }
     return render(request, 'cart.html', context)
+
 
