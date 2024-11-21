@@ -17,7 +17,6 @@ def shop(request):
     context = {
         'title': title,
         'text': text,
-        #'games:': ['Doom II', 'Warcraft', 'Vikings'],
         'games': ['Doom II', 'Warcraft', 'Vikings']
     }
     return render(request, 'shop.html', context)
