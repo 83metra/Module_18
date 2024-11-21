@@ -15,13 +15,13 @@
         {% block menu %}
             <ul>
                 <li>
-                    <a href=" "><h3>Главная страница</h3></a>
+                    <a href="{% url 'platform' %}"><h3>Главная страница</h3></a>
                 </li>
                 <li>
-                    <a href="shop/"><h3>Магазин</h3></a>
+                    <a href="{% url 'shop' %}"><h3>Магазин</h3></a>
                 </li>
                 <li>
-                    <a href="cart/"><h3>Корзина</h3></a>
+                    <a href="{% url 'cart' %}"><h3>Корзина</h3></a>
 
                 </li>
             </ul>

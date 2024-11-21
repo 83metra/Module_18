@@ -27,7 +27,7 @@ from django.urls import path
 from task4.views import platform, shop, cart
 
 urlpatterns = [
-    path('', platform),
-    path('shop/', shop),
-    path('cart/', cart)
+    path('', platform, name='platform'),
+    path('shop/', shop, name='shop'),
+    path('cart/', cart, name='cart')
 ]
