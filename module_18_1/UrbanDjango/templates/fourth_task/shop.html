@@ -1,27 +1,14 @@
 {% extends 'menu.html' %}
-<!DOCTYPE html>
-<html lang="en">
-<body>
-    <header>
-        {% block pagename %}
-        <h1>{{text}}</h1>
-        {% endblock %}
-    </header>
-
-    <nav>
-        {% block menu %}
-            {{ block.super }}
-        {% endblock %}
-    </nav>
-<main>
+{% block pagename %}<h1>Игры</h1>{% endblock %}
+{% block menu %}{{ block.super }}{% endblock %}
 {% block content %}
-    {% for game in games %}
-        <p>{{ game }}</p>
-    {% endfor %}
-        <p><a href="/ ">Назад</a></p>
+    <ul>
+        {% for game in games %}
+            <li>{{ game }} <button>Купить</button></li>
+        {% endfor %}
+        <p>{{games}}</p>
+    </ul>
 {% endblock %}
-</main>
-</body>
 
 <!--</html>
 <head>
