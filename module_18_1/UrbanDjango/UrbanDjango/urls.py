@@ -24,10 +24,17 @@ from django.urls import path
 #     path('goodbye/', Welcome.as_view())
 # ]
 
-from task4.views import platform, shop, cart
+# from task4.views import platform, shop, cart
+#
+# urlpatterns = [
+#     path('', platform, name='platform'),
+#     path('shop/', shop, name='shop'),
+#     path('cart/', cart, name='cart')
+# ]
+
+from task5.views import sign_up_by_django, sign_up_by_html
 
 urlpatterns = [
-    path('', platform, name='platform'),
-    path('shop/', shop, name='shop'),
-    path('cart/', cart, name='cart')
+    path('', sign_up_by_django),
+    path('sign/', sign_up_by_html)
 ]
