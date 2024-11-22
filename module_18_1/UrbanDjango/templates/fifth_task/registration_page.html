@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+    <p>{{error}}</p>
     <form method="post">
         {% csrf_token %}
         <label for="username">Введите логин</label>
@@ -22,7 +23,7 @@
 
         <button type="submit">Отправить</button>
     </form>
-    <p>{{info}}</p>
+
 
 </body>
 </html>

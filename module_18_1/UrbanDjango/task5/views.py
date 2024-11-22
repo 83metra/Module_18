@@ -34,37 +34,13 @@ def sign_up_by_html(request):
 
 
         if username in users:
-            #print('Пользователь уже есть в списке!')
-            info.update({'error': username})
+            info.update({'error': 'Пользователь уже существует.'})
         elif password != repeat_password:
-            #print('Пароли не совпадают!')
-            info.update({'error':password})
+            info.update({'error': 'Пароли не совпадают.'})
         elif int(age) < 18:
-            #print('Возраст < 18')
-            info.update({'error': age})
+            info.update({'error': 'Вы должны быть старше 18.'})
         else:
-            #print('Годится!')
             return HttpResponse('Приветствуем, %s!' % username)
 
     #print(info)
     return render(request, 'registration_page.html', info)
-
-
-
-# def index6(request):
-#     if request.method == 'POST':
-#         # Получаем данные:
-#         name = request.POST.get('name')
-#         email = request.POST.get('email')
-#         message = request.POST.get('message')
-#         subscribe = request.POST.get('subscribe') == 'on'
-#
-#         print(f'Name: {name}')
-#         print(f'Email: {email}')
-#         print(f'Message: {message}')
-#         print(f'Subscribe: {subscribe}')
-#
-#         # Ответ пользователю:
-#         return HttpResponse('Форма успешно отправлена!')
-#     # Если это GET
-#     return render(request, 'index6.html')
