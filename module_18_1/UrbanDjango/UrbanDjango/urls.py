@@ -35,6 +35,6 @@ from django.urls import path
 from task5.views import sign_up_by_django, sign_up_by_html
 
 urlpatterns = [
-    path('', sign_up_by_django),
-    path('sign/', sign_up_by_html)
+    path('django_sign_up', sign_up_by_django),
+    path('', sign_up_by_html)
 ]
