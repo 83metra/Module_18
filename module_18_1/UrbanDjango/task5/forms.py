@@ -5,6 +5,3 @@ class UserRegister(forms.Form):
     password = forms.CharField(max_length=8 , label='Введите пароль', required=True)
     repeat_password = forms.CharField(max_length=8, label='Повторите пароль', required=True)
     age = forms.CharField(max_length=3, label='Введите свой возраст')
-
-    def valid_password(self):
-        return self.password is self.repeat_password
